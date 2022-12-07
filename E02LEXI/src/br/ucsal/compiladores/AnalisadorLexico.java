@@ -94,7 +94,7 @@ public class AnalisadorLexico {
 	}
 
 	public boolean isBranco(String text) {
-		// “caracter de espaço em branco”.
+		// “CARACTER de espaço em branco”.
 		return text.matches("\\s");
 	}
 
@@ -185,7 +185,7 @@ public class AnalisadorLexico {
 				// Caso seja definicao de string
 				if (character.equals('"')) {
 
-					if (atomo != null && atomo.getCodigo() != Atomo.CONSTANT_STRING.getCodigo()) {
+					if (atomo != null && atomo.getCodigo() != Atomo.CONS_CARACTER.getCodigo()) {
 						this.continuarMesmoCharacter = true;
 						return atomo;
 					}
@@ -196,7 +196,7 @@ public class AnalisadorLexico {
 							return atomo;
 						}
 						String conteudo = atomoAtual.toString();
-						Atomo _atomo = Atomo.CONSTANT_STRING;
+						Atomo _atomo = Atomo.CONS_CARACTER;
 						_atomo.setLexeme(conteudo);
 						_atomo.setTamanho(conteudo.length());
 						_atomo.setLinha(this.linha);
@@ -215,7 +215,7 @@ public class AnalisadorLexico {
 					}
 					if (atomo == null) {
 						String conteudo = atomoAnterior + "\"";
-						Atomo _atomo = Atomo.CONSTANT_STRING;
+						Atomo _atomo = Atomo.CONS_CARACTER;
 						_atomo.setLexeme(conteudo);
 						_atomo.setTamanho(conteudo.length());
 						_atomo.setLinha(this.linha);
@@ -260,7 +260,7 @@ public class AnalisadorLexico {
 
 				if (isIntegerNumber(atomoAtual.toString())) {
 					atomoAnterior = atomoAtual.toString();
-					Atomo _atomo = Atomo.INTEGER_NUMBER;
+					Atomo _atomo = Atomo.INTEIRO;
 					_atomo.setLexeme(atomoAnterior);
 					_atomo.setTamanho(atomoAnterior.length());
 					_atomo.setLinha(this.linha);
@@ -272,7 +272,7 @@ public class AnalisadorLexico {
 				if (isFloatNumber(atomoAtual.toString() + '0')) {
 					String text = proxCharacter();
 					atomoAnterior = atomoAtual.toString();
-					Atomo _atomo = Atomo.FLOAT_NUMBER;
+					Atomo _atomo = Atomo.REAL;
 					_atomo.setLexeme(atomoAnterior);
 					_atomo.setTamanho(atomoAnterior.length());
 					_atomo.setLinha(this.linha);
@@ -282,7 +282,7 @@ public class AnalisadorLexico {
 						atomoAtual.append(text);
 						atomoAnterior = atomoAtual.toString();
 						if (isFloatNumber(atomoAtual.toString())) {
-							_atomo = Atomo.FLOAT_NUMBER;
+							_atomo = Atomo.REAL;
 							_atomo.setLexeme(atomoAnterior);
 							_atomo.setTamanho(atomoAnterior.length());
 							_atomo.setLinha(this.linha);

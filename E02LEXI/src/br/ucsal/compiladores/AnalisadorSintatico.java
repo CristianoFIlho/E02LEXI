@@ -19,7 +19,7 @@ public class AnalisadorSintatico {
 			fileName = scanner.next();
 			
 			if (fileName.contains(".201")) {
-				System.out.println("Por favor insira o nome do arquivo sem a extens„o");
+				System.out.println("Por favor insira o nome do arquivo sem a extens√£o");
 				return;
 			}
 			
@@ -40,7 +40,7 @@ public class AnalisadorSintatico {
 			//TODO: gerar arquivo com relatorio da analise lexica, com extensao .LEX (Ex.: MeuTeste.LEX)
 			//TODO: gerar arquivo com relatorio da tabela de simbolos, com extensao .TAB (Ex.: MeuTeste.TAB)
 		} catch (Exception e) {
-			System.out.println("Ocorreu um erro ao abrir o arquivo!");
+			System.out.println("Erro ao abrir o arquivo");
 			e.printStackTrace();
 		}
 	}
@@ -48,13 +48,14 @@ public class AnalisadorSintatico {
 	public static void gerarRelatorioLexico(RelatorioLexico relatorioLexico) throws IOException {
 		File relatorioLex = new File(fileName + ".LEX");
 		FileWriter fileWriter = new FileWriter(relatorioLex);
-		System.out.println("gerando Relatorio Lexico");
+		System.out.println("Relatorio Lexico");
 		System.out.println("atomos " + relatorioLexico.getItens().size());
-		fileWriter.append("Equipe 03 \n");
+		fileWriter.append("Equipe E02 \n");
 		fileWriter.append("Componentes: \n");
-		fileWriter.append("Eli Marins, eli.filho@ucsal.edu.br, (71) 99191-9488 \n");
-		fileWriter.append("Gabriel Paim, gabriel.paim@ucsal.edu.br, (71) 99164-2456\n");
-		fileWriter.append("Ibira Junior., ibira.junior@ucsal.edu.br, (71) 99387-7743 \n \n");
+		fileWriter.append("Cristiano Filho, cristiano.filho@ucsal.edu.br, (71) 983973644 \n");
+		fileWriter.append("Enzo Santana., enzo.almeida@ucsal.edu.br , (71) 991150087\n");
+		fileWriter.append("Vinicius dos Santos., vinicius.candeias@ucsal.edu.br, (71) 984353370 \n \n");
+		fileWriter.append("Rodrigo Fiuza., rodrigo.oliveira@ucsal.edu.br, (71) 981086001\n \n");
 		
 		for (int i = 0; i < relatorioLexico.getItens().size(); i++) {
 			fileWriter.append(relatorioLexico.getItens().get(i).toStringLex()).append("\n");
@@ -75,23 +76,23 @@ public class AnalisadorSintatico {
 	
 	/**
 	 * Arquivo .LEX
-	 * deve mostrar a relaÁ„o dos sÌmbolos da linguagem que foram encontrados no texto fonte analisado, 
+	 * deve mostrar a rela√ß√£o dos s√≠mbolos da linguagem que foram encontrados no texto fonte analisado, 
 	 * na ordem em que estes aparecerem e tantas vezes quantas tenham aparecido.
 	 * 
-	 * deve indicar no cabeÁalho: o cÛdigo identificador da equipe, os nomes, e-mails e telefones 
-	 * de todos os componentes da equipe que participaram da elaboraÁ„o desta etapa do projeto.
+	 * deve indicar no cabe√ßalho: o c√≥digo identificador da equipe, os nomes, e-mails e telefones 
+	 * de todos os componentes da equipe que participaram da elabora√ß√£o desta etapa do projeto.
 	 * 
-	 * Para cada linha detalhe do relatÛrio de an·lise lÈxica, devem ser exibidas no mÌnimo as informaÁıes: 
-	 * o elemento lÈxico formado (chamado de lexeme), o cÛdigo do ·tomo correspondente a este elemento lÈxico 
-	 * e o Ìndice deste sÌmbolo na tabela de sÌmbolos (quando for um sÌmbolo que seja armazenado nesta estrutura de dados).
+	 * Para cada linha detalhe do relat√≥rio de an√°lise l√©xica, devem ser exibidas no m√≠nimo as informa√ß√µes: 
+	 * o elemento l√©xico formado (chamado de lexeme), o c√≥digo do √°tomo correspondente a este elemento l√©xico 
+	 * e o √≠ndice deste s√≠mbolo na tabela de s√≠mbolos (quando for um s√≠mbolo que seja armazenado nesta estrutura de dados).
 	 * 
 	 * 
 	 * 
 	 * 
 	 * Arquivo .TAB
-	 * deve mostrar todos os sÌmbolos do tipo identificadores que foram armazenados na tabela de sÌmbolos durante o processo de avaliaÁ„o do texto fonte.
+	 * deve mostrar todos os s√≠mbolos do tipo identificadores que foram armazenados na tabela de s√≠mbolos durante o processo de avalia√ß√£o do texto fonte.
 	 * 
-	 * Para cada sÌmbolo armazenado na tabela de sÌmbolos devem ser relacionados 
+	 * Para cada s√≠mbolo armazenado na tabela de s√≠mbolos devem ser relacionados 
 	 * todos os atributos dele com todos os valores que foram preenchidos durante o funcionamento do Static Checker
 	 */
 

@@ -94,7 +94,7 @@ public class AnalisadorLexico {
 	}
 
 	public boolean isBranco(String text) {
-		// ìcaracter de espaÁo em brancoî.
+		// ‚Äúcaracter de espa√ßo em branco‚Äù.
 		return text.matches("\\s");
 	}
 
@@ -111,12 +111,19 @@ public class AnalisadorLexico {
 				relatorioLexico.addItem(novoItem);
 				
 				switch (_atomo) {
-				case FUNCTION:
-				case CONSTANT_STRING:
-				case INTEGER_NUMBER:
-				case IDENTIFIER:
-				case CHARACTER:
-				case FLOAT_NUMBER:
+				case NOM_PROGRAMA:
+				case VARIAVEL:
+				case NOM_FUNCAO:
+				case CONS_INTEIRO:
+				case CONS_REAL:
+				case CONS_CADEIA:
+				case CONS_CARACTER:
+				
+				
+				
+						NOM_PROGRAMA(null, "201"),
+	
+	
 					relatorioLexico.getTabeladeSimbolos().addItem(novoItem);
 					break;
 

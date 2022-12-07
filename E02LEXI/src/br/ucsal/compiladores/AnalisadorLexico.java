@@ -34,67 +34,62 @@ public class AnalisadorLexico {
 	}
 
 	public boolean isIdentifier(String text) {
-		// < letra > | _ | < Identifier > <letra> | < Identifier > < digito > | <
-		// Identifier > _
+		
 		return text.matches("([_A-Z][_A-Z0-9]*[A-Z_])|[_]|[A-Z]");
 	}
 
-	public boolean isFunction(String text) {
-		// < letra > | _ | < Identifier > <letra> | < Identifier > < digito > | <
-		// Identifier > _
+	public boolean isFUNCOES(String text) {
+	
 		return text.matches("([A-Z_][_A-Z0-9]*[A-Z0-9])|[A-Z]");
 	}
 
 	public boolean isIntegerNumber(String text) {
-		// < decimal_digits >
+	
 		return text.matches("^[0-9]*$");
 	}
 
 	public boolean isDecimalDigits(String text) {
-		// < digito > | < decimal_digits > < digito >
+		
 		return text.matches("^[0-9]*$|^[0-9]*$");
 	}
 
 	public boolean isFloatNumber(String text) {
-		// < decimal_digits > . < decimal_digits > | < decimal_digits > . <
-		// decimal_digits > < exponent_part >
+		
 		return text.matches("^[0-9]*$.^[0-9]*$|^[0-9]*$.^[0-9]*$ ^[0-9]*$");
 	}
 
 	public boolean isExponentPart(String text) {
-		// e < decimal_digits > | e - < decimal_digits > | e + < decimal_digits >
+		
 		return text.matches("e ^[0-9]*$|e - ^[0-9]*$| e + ^[0-9]*$");
 	}
 
 	public boolean isConstantString(String text) {
-		// "''" < Middle-String > "''" //inicia e termina com aspas duplas
+		
 		return text.matches("''^[A-Z_]*$''");
 	}
 
 	public boolean isMiddleString(String text) {
-		// ( < letra > | < branco > | < digito> | $ | _ | . ) < Middle-String > | <
-		// letra > | < branco > | < digito> | $ | _ | .
+	
 		return text.matches("[\"][A-Z\\d\\s$_.]+[\"]");
 	}
 
 	public boolean isCharacter(String text) {
-		// "'" < letra > "'" //inicia e termina com aspas simples
+		
 		return text.matches("'[a-zA-Z]'");
 	}
 
 	public boolean isLetra(String text) {
-		// a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t
-		// | u | v | w | x | y | z
+		
 		return text.matches("[a-zA-Z]");
 	}
 
 	public boolean isDigito(String text) {
-		// 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+		
 		return text.matches("\\d");
 	}
 
 	public boolean isBranco(String text) {
-		// “CARACTER de espaço em branco”.
+	
 		return text.matches("\\s");
 	}
 
@@ -121,7 +116,7 @@ public class AnalisadorLexico {
 				
 				
 				
-						NOM_PROGRAMA(null, "201"),
+						
 	
 	
 					relatorioLexico.getTabeladeSimbolos().addItem(novoItem);
@@ -157,21 +152,20 @@ public class AnalisadorLexico {
 
 				Atomo palavraReservada = Atomo.parsePalavraReservada(atomoAtual.toString().toUpperCase());
 
-				// Caso seja comentario de linha
+				
 				if (atomoAtual.toString().equals("//")) {
 					comentarioLinha = true;
 					atomoAtual = new StringBuilder();
 					continue;
 				}
 
-				// Caso seja comentario de bloco
+				
 				if (atomoAtual.toString().equals("/*")) {
 					comentarioBloco = true;
 					atomoAtual = new StringBuilder();
 					continue;
 				}
 
-				// Caso seja uma palavra reservada
 				if (palavraReservada != null) {
 					atomoAnterior = atomoAtual.toString();
 					atomo = palavraReservada;
@@ -182,7 +176,7 @@ public class AnalisadorLexico {
 					continue;
 				}
 
-				// Caso seja definicao de string
+				
 				if (character.equals('"')) {
 
 					if (atomo != null && atomo.getCodigo() != Atomo.CONS_CARACTER.getCodigo()) {
@@ -227,7 +221,7 @@ public class AnalisadorLexico {
 
 				if (isIdentifier(atomoAtual.toString())) {
 					atomoAnterior = atomoAtual.toString();
-					Atomo _atomo = Atomo.IDENTIFIER;
+					Atomo _atomo = Atomo.CONS_CADEIA;
 					_atomo.setLexeme(atomoAnterior);
 					_atomo.setTamanho(atomoAnterior.length());
 					_atomo.setLinha(this.linha);
@@ -237,9 +231,9 @@ public class AnalisadorLexico {
 					continue;
 				}
 
-				if (isFunction(atomoAtual.toString())) {
+				if (isFUNCOES(atomoAtual.toString())) {
 					atomoAnterior = atomoAtual.toString();
-					Atomo _atomo = Atomo.FUNCTION;
+					Atomo _atomo = Atomo.NOM_FUNCAO;
 					_atomo.setLexeme(atomoAnterior);
 					_atomo.setTamanho(atomoAnterior.length());
 					_atomo.setLinha(this.linha);
@@ -250,7 +244,7 @@ public class AnalisadorLexico {
 
 				if (isCharacter(atomoAtual.toString())) {
 					atomoAnterior = atomoAtual.toString();
-					Atomo _atomo = Atomo.CHARACTER;
+					Atomo _atomo = Atomo.CONS_CARACTER;
 					_atomo.setLexeme(atomoAnterior);
 					_atomo.setTamanho(atomoAnterior.length());
 					_atomo.setLinha(this.linha);
@@ -260,7 +254,7 @@ public class AnalisadorLexico {
 
 				if (isIntegerNumber(atomoAtual.toString())) {
 					atomoAnterior = atomoAtual.toString();
-					Atomo _atomo = Atomo.INTEIRO;
+					Atomo _atomo = Atomo.CONS_INTEIRO;
 					_atomo.setLexeme(atomoAnterior);
 					_atomo.setTamanho(atomoAnterior.length());
 					_atomo.setLinha(this.linha);
@@ -272,7 +266,7 @@ public class AnalisadorLexico {
 				if (isFloatNumber(atomoAtual.toString() + '0')) {
 					String text = proxCharacter();
 					atomoAnterior = atomoAtual.toString();
-					Atomo _atomo = Atomo.REAL;
+					Atomo _atomo = Atomo.CONS_REAL;
 					_atomo.setLexeme(atomoAnterior);
 					_atomo.setTamanho(atomoAnterior.length());
 					_atomo.setLinha(this.linha);
@@ -282,7 +276,7 @@ public class AnalisadorLexico {
 						atomoAtual.append(text);
 						atomoAnterior = atomoAtual.toString();
 						if (isFloatNumber(atomoAtual.toString())) {
-							_atomo = Atomo.REAL;
+							_atomo = Atomo.CONS_REAL;
 							_atomo.setLexeme(atomoAnterior);
 							_atomo.setTamanho(atomoAnterior.length());
 							_atomo.setLinha(this.linha);

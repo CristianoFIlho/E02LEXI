@@ -1,1 +1,0 @@
-java -jar staticCheckerE03.jar

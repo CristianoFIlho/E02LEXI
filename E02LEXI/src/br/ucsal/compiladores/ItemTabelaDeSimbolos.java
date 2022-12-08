@@ -20,19 +20,6 @@ public class ItemTabelaDeSimbolos {
 
 	private List<Integer> cincoPrimeirasLinhas;
 
-	public ItemTabelaDeSimbolos(Integer numEntradaTabSimbolos, String codigoAtomo, String lexame,
-			Integer qntCaracteresAntesTruncagem, Integer qntCaracteresDepoisTruncagem, Atomo tipoSimbolo, Integer linha) {
-		super();
-		this.numEntradaTabSimbolos = numEntradaTabSimbolos;
-		this.codigoAtomo = codigoAtomo;
-		this.lexame = lexame;
-		this.qntCaracteresAntesTruncagem = qntCaracteresAntesTruncagem;
-		this.qntCaracteresDepoisTruncagem = qntCaracteresDepoisTruncagem;
-		this.tipoSimbolo = tipoSimbolo;
-		this.linha = linha;
-		this.cincoPrimeirasLinhas = new ArrayList<Integer>();
-		this.cincoPrimeirasLinhas.add(linha);
-	}
 
 	public Integer getNumEntradaTabSimbolos() {
 		return numEntradaTabSimbolos;
@@ -154,4 +141,18 @@ public class ItemTabelaDeSimbolos {
 	
 	
 	
+	public ItemTabelaDeSimbolos(Integer numEntradaTabSimbolos, String codigoAtomo, String lexame,
+			Integer qntCaracteresAntesTruncagem, Integer qntCaracteresDepoisTruncagem, Atomo tipoSimbolo, Integer linha) {
+		super();
+		this.numEntradaTabSimbolos = numEntradaTabSimbolos;
+		this.codigoAtomo = codigoAtomo;
+		this.lexame = lexame;
+		this.qntCaracteresAntesTruncagem = qntCaracteresAntesTruncagem;
+		this.qntCaracteresDepoisTruncagem = qntCaracteresDepoisTruncagem;
+		this.tipoSimbolo = tipoSimbolo;
+		this.linha = linha;
+		this.cincoPrimeirasLinhas = new ArrayList<Integer>();
+		this.cincoPrimeirasLinhas.add(linha);
+	}
 }
+	

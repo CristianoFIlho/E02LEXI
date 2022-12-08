@@ -3,11 +3,11 @@ package br.ucsal.compiladores;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RelatorioLexico {
+public class OutputLexico {
 	List<ItemTabelaDeSimbolos> itens;
 	TabeladeSimbolos tabeladeSimbolos;
 
-	public RelatorioLexico() {
+	public OutputLexico() {
 		this.itens = new ArrayList<ItemTabelaDeSimbolos>();
 		this.tabeladeSimbolos = new TabeladeSimbolos();
 	}

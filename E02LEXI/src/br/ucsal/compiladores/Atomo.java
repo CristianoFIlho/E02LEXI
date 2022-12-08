@@ -60,45 +60,47 @@ public enum Atomo {
 
 	private String atomo;
 	
-	private String codigo;
+	private String code;
+
+	private Integer size;
+	
+	private Integer line;
+	
+	private Integer nextLine;
+	
+	private Integer indiceSimbolos;
 	
 	private String lexeme;
 	
-	private Integer tamanho;
-	
-	private Integer linha;
-	
-	private Integer posLinha;
-	
-	private Integer indiceTabSimbolos;
 
-	Atomo(String atomo, String codigo) {
+
+	Atomo(String atomo, String code) {
 		this.atomo = atomo;
-		this.codigo = codigo;
+		this.code = code;
 		lexeme = null;
-		tamanho = null;
+		size = null;
 	}
 	
-	Atomo(String atomo, String codigo, String conteudo, Integer tamanho, Integer linha, Integer posLinha, Integer indiceTabSimbolos) {
+	Atomo(String atomo, String code, String conteudo, Integer size, Integer line, Integer nextLine, Intege) {
 		this.atomo = atomo;
-		this.codigo = codigo;
+		this.code = code;
 		this.lexeme = conteudo;
-		Integer tamanhoFinal = tamanho;
+		Integer tamanhoFinal = size;
 		if (tamanhoFinal > 30) {
 			tamanhoFinal = 30;
 		}
-		this.tamanho = tamanhoFinal;
-		this.linha = linha;
-		this.posLinha = posLinha;
-		this.indiceTabSimbolos = indiceTabSimbolos;
+		this.size = tamanhoFinal;
+		this.line = line;
+		this nextLine = nextLine;
+		this indiceSimbolos = indiceSimbolos;
 	}
 	
 	public String getAtomo() {
 		return this.atomo;
 	}
 	
-	public String getCodigo() {
-		return this.codigo;
+	public String getcode() {
+		return this.code;
 	}
 	
 	public void setLexeme(String conteudo) {
@@ -109,35 +111,35 @@ public enum Atomo {
 		return this.lexeme;
 	}
 	
-	public void setTamanho(Integer tamanho) {
-		Integer tamanhoFinal = tamanho;
+	public void setTamanho(Integer size) {
+		Integer tamanhoFinal = size;
 		if (tamanhoFinal > 30) {
 			tamanhoFinal = 30;
 		}
-		this.tamanho = tamanhoFinal;
+		this.size = tamanhoFinal;
 	}
 	
-	public void setLinha(Integer linha) {
-		this.linha = linha;
+	public void setLinha(Integer line) {
+		this.line = line;
 	}
 
-	public void setPosLinha(Integer posLinha) {
-		this.posLinha = posLinha;
+	public void se nextLine(Integer nextLine) {
+		this nextLine = nextLine;
 	}
 	
 	public Integer getTamanho() {
-		return this.tamanho;
+		return this.size;
 	}
 	
-	public Integer getIndiceTabSimbolos() {
-		return this.indiceTabSimbolos;
+	public Integer getIndiceSimbolos() {
+		return this.indiceSimbolos;
 	}
 	
-	public void setIndiceTabSimbolos(Integer indiceTabSimbolos) {
-		this.indiceTabSimbolos = indiceTabSimbolos;
+	public void setIndiceSimbolos(Integer) {
+		this.indiceSimbolos;
 	}
 	
-	public static Atomo parsePalavraReservada(String text) {
+	public static Atomo parseSimboloReservado(String text) {
 		for (Atomo palavraReservada : values()) {
 		      if (palavraReservada.getAtomo() != null && 
 		        palavraReservada.getAtomo().equalsIgnoreCase(text))
@@ -150,8 +152,8 @@ public enum Atomo {
 	public String toString() {
 		String lexeme = this.getAtomo() == null ? "null" : this.getAtomo();
 		String conteudo = this.getLexeme() == null ? "null" : this.getLexeme();
-		String codAtomo = this.getCodigo() == null ? "null" : this.getCodigo();
-		String indice = this.getIndiceTabSimbolos() == null ? "null" : this.getIndiceTabSimbolos().toString();
-		return "Lexeme: " + lexeme + ", conteudo: " + conteudo + ", codigo_atomo: " + codAtomo + ", indice_tabela_de_simbolos: " + indice;
+		String codAtomo = this.getcode() == null ? "null" : this.getcode();
+		String indice = this.getIndiceSimbolos() == null ? "null" : this.getIndiceSimbolos().toString();
+		return "Lexeme: " + lexeme + ", conteudo: " + conteudo + ", code_atomo: " + codAtomo + ", indice_tabela_de_simbolos: " + indice;
 	}
 }

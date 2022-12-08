@@ -19,14 +19,15 @@ public class AnalisadorSintatico {
 			fileName = scanner.next();
 			
 			if (fileName.contains(".201")) {
-				System.out.println("Por favor insira o nome do arquivo sem a extensão");
+				System.out.println(" Inserir o nome do arquivo sem a extensão");
 				return;
 			}
 			
 			file = new File(fileName + ".201");
 			
 			AnalisadorLexico lexico = new AnalisadorLexico(new BufferedReader(new FileReader(file)));
-			RelatorioLexico relatorioLexico = lexico.gerarRelatorio();
+			OutputLexico
+			 relatorioLexico = lexico.gerarRelatorio();
 			gerarRelatorioLexico(relatorioLexico);
 			gerarTabelaDeSimbolos(relatorioLexico.getTabeladeSimbolos());
 			
@@ -37,10 +38,10 @@ public class AnalisadorSintatico {
 		}
 	}
 	
-	public static void gerarRelatorioLexico(RelatorioLexico relatorioLexico) throws IOException {
+	public static void gerarRelatorioLexico(OutputLexico relatorioLexico) throws IOException {
 		File relatorioLex = new File(fileName + ".LEX");
 		FileWriter fileWriter = new FileWriter(relatorioLex);
-		System.out.println("Relatorio Lexico");
+		System.out.println("Output Lexico");
 		System.out.println("atomos " + relatorioLexico.getItens().size());
 		fileWriter.append("Equipe E02 \n");
 		fileWriter.append("Componentes: \n");

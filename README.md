@@ -1,6 +1,10 @@
 # E02LEXI
  
 
-É necessário ter o Java 8 ou superior instalado para executar o projeto; <br>
-Para executar o arquivo final, só executar o arquivo staticCheckerE02; <br>
-Após isso, no cmd, digite o nome do arquivo .695 que você quer executar; <br>
+Java 11 instalado para executar o projeto; 
+
+- No diretorio do arquivo adicione o seu arquivo para executar o arquivo final, só
+rodar a classe AnalisadorSintatico.java e obter o relatorio .LEX e .TAB;
+
+- No console, digite o nome do ¨seu arquivo¨ .695 que você quer executar como
+no exemplo abaixo;

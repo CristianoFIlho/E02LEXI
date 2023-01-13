@@ -1,0 +1,7 @@
+br/ucsal/compiladores/tabelas/ItemTabelaDeSimbolos.class
+br/ucsal/compiladores/controller/AnalisadorLexico$1.class
+br/ucsal/compiladores/controller/OutputLexico.class
+br/ucsal/compiladores/tabelas/TabeladeSimbolos.class
+br/ucsal/compiladores/ENUNS/Atomo.class
+br/ucsal/compiladores/principal/AnalisadorSintatico.class
+br/ucsal/compiladores/controller/AnalisadorLexico.class

@@ -1,0 +1,28 @@
+Equipe 01
+Componentes:
+Bruna Ribeiro, bruna.ribeiro@ucsal.edu.br, (71) 99247-5015
+Jamile Conceição, jamile.conceicao@ucsal.edu.br, (71) 98133-0263
+Lucas Walter, lucas.walter@ucsal.edu.br, (71) 99163-2197
+Murilo Caetano, murilo.caetano@ucsal.edu.br, (71) 98173-9182
+
+TabelaSimbolos{tipo='testeParatestarUmNomedeProgramaQueEMaiorQueOPermitidoParaNomedeProgramas', tamanhoOriginal=72, tamanhoFinal=30, cincoPrimeirasLinhas=[], numeroEntradaTabela='1', codigo='201', lexeme='testeParatestarUmNomedeProgram'}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='2', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='3', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='4', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='5', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='6', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='7', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='8', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='9', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='10', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='11', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='12', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='13', codigo='', lexeme=''}
+TabelaSimbolos{tipo='0', tamanhoOriginal=1, tamanhoFinal=1, cincoPrimeirasLinhas=[], numeroEntradaTabela='14', codigo='204', lexeme='0'}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='15', codigo='', lexeme=''}
+TabelaSimbolos{tipo='', tamanhoOriginal=0, tamanhoFinal=0, cincoPrimeirasLinhas=[], numeroEntradaTabela='16', codigo='', lexeme=''}
+TabelaSimbolos{tipo='0', tamanhoOriginal=1, tamanhoFinal=1, cincoPrimeirasLinhas=[], numeroEntradaTabela='17', codigo='204', lexeme='0'}
+TabelaSimbolos{tipo='operador', tamanhoOriginal=8, tamanhoFinal=8, cincoPrimeirasLinhas=[], numeroEntradaTabela='18', codigo='202', lexeme='operador'}
+TabelaSimbolos{tipo='operador', tamanhoOriginal=8, tamanhoFinal=8, cincoPrimeirasLinhas=[], numeroEntradaTabela='19', codigo='202', lexeme='operador'}
+TabelaSimbolos{tipo='1', tamanhoOriginal=1, tamanhoFinal=1, cincoPrimeirasLinhas=[], numeroEntradaTabela='20', codigo='204', lexeme='1'}
+TabelaSimbolos{tipo='1', tamanhoOriginal=1, tamanhoFinal=1, cincoPrimeirasLinhas=[], numeroEntradaTabela='21', codigo='204', lexeme='1'}

@@ -1,0 +1,40 @@
+// Meu comentario
+
+
+
+/*
+Meu comentario de
+muitas linhas
+
+*/
+
+programa testeParatestarUmNomedeProgramaQueEMaiorQueOPermitidoParaNomedeProgramas {
+
+    declaracoes
+    inteiro: a, b, c;
+    real: x, y, z;
+@
+    fim-declaracoes
+
+    funcoes
+    
+     inteiro: minhaFuncao(real: operador) {
+        se (operador > 0) {
+            imprime operador;
+        }
+        fim-se
+
+        enquanto(operador >= 0) {
+            operador := operador - 1;
+
+        }
+        fim-enquanto
+
+        retorna 1;
+        fim-func
+     }
+
+    fim-funcoes
+
+}
+    fim-programa

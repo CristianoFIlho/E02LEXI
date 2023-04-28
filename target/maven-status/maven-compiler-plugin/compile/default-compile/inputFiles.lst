@@ -1,6 +1,11 @@
-/home/jarvis/eclipse-workspace/zero/E02LEXI/src/main/java/br/ucsal/compiladores/controller/OutputLexico.java
-/home/jarvis/eclipse-workspace/zero/E02LEXI/src/main/java/br/ucsal/compiladores/ENUNS/Atomo.java
-/home/jarvis/eclipse-workspace/zero/E02LEXI/src/main/java/br/ucsal/compiladores/principal/AnalisadorSintatico.java
-/home/jarvis/eclipse-workspace/zero/E02LEXI/src/main/java/br/ucsal/compiladores/controller/AnalisadorLexico.java
-/home/jarvis/eclipse-workspace/zero/E02LEXI/src/main/java/br/ucsal/compiladores/tabelas/TabeladeSimbolos.java
-/home/jarvis/eclipse-workspace/zero/E02LEXI/src/main/java/br/ucsal/compiladores/tabelas/ItemTabelaDeSimbolos.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\repositorio\Repositorio.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\relatorio\GerarRelatorio.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\util\AnalizadorLexico.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\util\Identificadores.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\relatorio\RelatorioSimbolos.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\modelo\SimbolosReservados.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\modelo\PalavrasReservadas.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\modelo\Atomo.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\util\GestorSimbolos.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\console\Principal.java
+D:\projetos-ucsal\staticE01\src\main\java\br\ucsal\relatorio\RelatorioLexicos.java

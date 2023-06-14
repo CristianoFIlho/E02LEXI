@@ -10,6 +10,5 @@ imagem;
 - Para executar o StaticChekerE02-2.7.3-jar no terminal digite (java -jar
 StaticChekerE02-2.7.3-jar)
 
-![teste2](https://user-images.githubusercontent.com/54041918/212396160-cfdc646d-41a7-42cf-a76d-1202fa735e75.png)
+![Terminal Projeto Final](https://github.com/CristianoFIlho/E02LEXI/assets/54041918/78597390-7c0e-404c-bc47-c015944b1e9a)
 
-![test](https://user-images.githubusercontent.com/54041918/212396220-b2f599ee-b33c-4c69-a3d6-17399deeb018.png)
